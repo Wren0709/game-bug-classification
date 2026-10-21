@@ -1,0 +1,11 @@
+﻿description,true_category,predicted_category,needs_review
+Messages sent in quick succession by two players occasionally appear in a different order on their chat panels.,Network,Performance,True
+"I can move between the confirmation buttons using a controller, but neither button shows which one currently has focus.",UI,Audio,True
+"An ambient sound source is audible before saving, but its audio disappears after loading that save.",Audio,Gameplay,True
+Moving the same item back and forth between inventory slots occasionally creates an additional copy.,Gameplay,Audio,True
+Changing the voice volume slider does not seem to affect the loudness of dialogue playback.,Audio,Performance,True
+A remote character stops moving on screen for several seconds and then suddenly jumps to a new position.,Network,Performance,True
+"The crafting action removes the required materials from the inventory, but the finished item never appears.",Gameplay,Audio,True
+"The objective is marked as complete in the quest log, but its marker is still on the map afterward.",UI,Gameplay,True
+"After several fast travel attempts, the loading screen stays visible much longer than it did at the start of the session.",Performance,UI,True
+Switching rapidly between inventory and settings sometimes leaves the game unresponsive for a few seconds.,Performance,Audio,True
