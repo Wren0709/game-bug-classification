@@ -55,3 +55,7 @@ This is an educational experiment, not a production-ready defect triage tool. A 
 ## Further work
 
 The next step is to test with original observations from independently played games or public reports that can legally be reused. Those reports should be separated by source or game during evaluation to better assess generalization. Clearer labeling guidance and a review of cases that fit multiple categories would also improve the study.
+
+## Data Confidentiality
+This project was inspired by my experience as a game testing intern. As the testing materials from my internship are confidential, I created an independent synthetic dataset for this project.
+No company-owned bug reports, internal test cases, source code or other confidential materials were used.
