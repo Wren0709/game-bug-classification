@@ -1,84 +1,57 @@
 # Game Bug Classification and Analysis System
 
-This is a personal Python project exploring how text classification could help a game QA team sort incoming bug reports. It includes a set of sample test cases and a simple machine learning model. It is a learning project, not a tool that automatically finds defects in games.
+A small Python project exploring how text classification can help organize game bug reports. It combines a proposed manual QA test suite with an experiment that assigns one of five categories to a written issue description. The classifier does not identify defects in a game or establish that a reported issue is reproducible.
 
-The examples are fictional and are not based on testing performed for an employer. No company documents, private game builds or player records are included.
+All reports in the training dataset are fictional. Some are written in the style of player feedback, while others resemble QA notes. The 50 test cases describe possible checks for common PC game features and have not been executed. No employer data or internal test materials are included.
 
-## Project contents
+## Repository contents
 
-| File | Description |
+| File | Purpose |
 | --- | --- |
-| `data/game_test_cases.csv` | 50 proposed test cases covering core gameplay and common PC game features. |
-| `data/demo_bug_reports.csv` | 40 fictional bug reports used to demonstrate text classification. |
-| `data/game_observations.csv` | An empty template for recording future tests conducted independently. |
-| `make_demo_data.py` | Recreates the fictional reports in the dataset. |
-| `main.py` | Trains the classifier and saves evaluation results. |
-| `game_test_helper.py` | Suggests categories for new observations entered in the template. |
+| `data/synthetic_bug_reports.csv` | 140 fictional issue descriptions labeled by category. |
+| `data/game_test_cases.csv` | 50 proposed manual tests with setup, actions and expected outcomes. |
+| `data/bug_observations.csv` | Empty form for observations recorded independently. |
+| `main.py` | Training, holdout evaluation, cross-validation and report generation. |
+| `classify_reports.py` | Assigns suggested categories to descriptions entered in the observation form. |
+| `validate_data.py` | Checks dataset and test case fields before training. |
+| `output/` | Evaluation artifacts produced from the provided dataset. |
 
-## Test case design
+## Method
 
-The test cases cover starting and closing a session, controls, movement, inventory, combat, saving, menus, audio, multiplayer and performance. Each case includes a starting condition, steps, expected result, priority and test type.
+The experiment uses TF-IDF features from individual words and word pairs, followed by logistic regression. Five labels are used: Audio, Gameplay, Network, Performance and UI.
 
-These are **proposed tests, not completed test runs**. The execution status is set to `Not run`, and the actual result is blank. Some cases apply only to games with the relevant feature. The expected results should be checked against the specifications of any game selected for testing.
+A stratified 75/25 split provides an inspectable holdout set. A most-frequent-class classifier serves as a simple baseline. The program also runs five-fold stratified cross-validation to show how results change across different subsets of the same small dataset. The TF-IDF vectorizer is fitted inside each training fold, not on the full dataset in advance.
 
-## How the classifier works
+Evaluation files include accuracy, macro F1, per-category precision and recall, a confusion matrix and the incorrectly classified holdout reports.
 
-The model uses the written description of a bug report as input. First, Pandas loads the labelled sample reports. TF-IDF converts their text into numerical features, and a Logistic Regression model learns to suggest one of five categories: `Audio`, `Gameplay`, `Network`, `Performance` or `UI`.
+## Run locally
 
-The data is divided into training and test sets using a fixed random seed and stratified sampling. The program reports accuracy, macro F1, precision, recall and a confusion matrix. Its predictions are category suggestions for manual review, not proof that a particular defect exists.
-
-## Running the project
-
-Use Python 3.10 or later. From the project folder, run:
+Python 3.10 or newer is recommended.
 
 ```bash
 python -m pip install -r requirements.txt
-python make_demo_data.py
+python validate_data.py
 python main.py
 ```
 
-To try the classification helper, add your own original observations to `data/game_observations.csv`. The `description` column is required. Then run:
+To classify new descriptions, enter them in `data/bug_observations.csv`, then run:
 
 ```bash
-python game_test_helper.py
+python classify_reports.py
 ```
 
-## Model results
+The category suggestions require human review. Scores from the classifier are not calibrated confidence estimates.
 
-The evaluation report is saved to `output/evaluation.txt`. The chart below shows how the classifier assigned categories to the held-out sample reports.
+## Evaluation
 
-![Confusion matrix for fictional bug reports](output/confusion_matrix.png)
+The recorded results are generated by running `main.py` against the bundled fictional reports.
 
-The dataset contains only 40 fictional reports, so the test set is small and the results are unstable. These scores do not demonstrate accuracy on genuine player bug reports. Some categories overlap, and real issue descriptions often contain information about more than one system.
+![Confusion matrix](output/confusion_matrix.png)
 
-The review queue in `output/review_queue.csv` is a demonstration produced from the available reports. It is not an independent test result, and its model scores should not be interpreted as calibrated probabilities.
+See `output/evaluation.txt` for the measured accuracy, macro F1, baseline and five-fold results. Individual holdout predictions appear in `output/test_predictions.csv`, and incorrect predictions in `output/misclassified_reports.csv`.
 
-## What I would improve next
+This is an educational experiment, not a production-ready defect triage tool. A random split can put closely related scenarios on both sides of the evaluation, even without exact duplicates. A balanced fictional dataset also differs from real player feedback, where category frequency, writing style and report quality vary. Cross-validation describes variation within this dataset; it does not solve the gap between synthetic examples and actual reports.
 
-I would collect a larger set of independently recorded reports with appropriate permission, check labels for consistency, and keep a separate test set from games or testers not represented in training. I would also review misclassified reports and compare the model with a simple keyword baseline before making claims about practical usefulness.
+## Further work
 
-## Repository structure
-
-```text
-game-bug-classification/
-├── README.md
-├── requirements.txt
-├── make_demo_data.py
-├── main.py
-├── game_test_helper.py
-├── data/
-│   ├── game_test_cases.csv
-│   ├── demo_bug_reports.csv
-│   └── game_observations.csv
-└── output/
-    ├── evaluation.txt
-    ├── confusion_matrix.png
-    ├── category_counts.png
-    ├── test_predictions.csv
-    └── review_queue.csv
-```
-
-## Data use
-
-The included reports are deliberately invented. Any future reports should come from independent testing or sources that permit reuse. Employer documents, confidential test results and personal information should not be added to this repository.
-
+The next step is to test with original observations from independently played games or public reports that can legally be reused. Those reports should be separated by source or game during evaluation to better assess generalization. Clearer labeling guidance and a review of cases that fit multiple categories would also improve the study.

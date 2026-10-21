@@ -1,0 +1,15 @@
+report_id,title,description,actual_category,predicted_category,correct
+SYN-007,Scrollbar disappears in long menu,"The menu list scrolls normally, although its scrollbar disappears once the number of entries gets large.",UI,Audio,False
+SYN-031,High latency warning missing,"During severe simulated latency, the game continues without displaying any connection quality warning.",Network,Performance,False
+SYN-032,Remote player position stops updating,A remote character stops moving on screen for several seconds and then suddenly jumps to a new position.,Network,Performance,False
+SYN-058,Volume value does not match slider position,Dragging the master volume slider to its minimum leaves the displayed numeric value at 10.,UI,Audio,False
+SYN-059,Multiple menu tabs appear selected,Switching quickly between audio and video settings leaves both tabs styled as active.,UI,Network,False
+SYN-062,Consumable disappears without effect,Using a healing item during a climb removes one item from the stack without restoring health.,Gameplay,UI,False
+SYN-067,Checkpoint reload places player inside rock,Loading the latest checkpoint occasionally places the player inside nearby terrain instead of on the path.,Gameplay,Network,False
+SYN-077,Quest completion fails with full inventory,Finishing a delivery quest while the backpack is full leaves the quest marked incomplete even though the item was handed over.,Gameplay,UI,False
+SYN-084,Lobby invitation expires immediately,A newly generated party invitation is reported as expired when accepted within a few seconds.,Network,Performance,False
+SYN-089,Remote damage arrives twice,A guest is hit once by an enemy attack but receives two damage events during temporary packet loss.,Network,Gameplay,False
+SYN-107,Asset loading pauses traversal,Moving rapidly between adjacent zones causes terrain objects to appear late and movement to halt briefly.,Performance,Audio,False
+SYN-118,Large inventory slows item sorting,Sorting an inventory with many unique items takes several seconds while the interface is blocked.,Performance,UI,False
+SYN-127,Water sounds continue on dry land,"After leaving a river, splash and water ambience continue while the player walks on a stone path.",Audio,Network,False
+SYN-140,Inventory pickup sound missing for stacked items,Picking up a second item into an existing stack updates the item count but does not play a pickup sound.,Audio,Network,False
