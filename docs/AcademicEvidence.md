@@ -17,6 +17,5 @@ This document identifies what can be verified in the repository. It does not cla
 
 **Original experiment:** 140 synthetic reports; 35-report stratified holdout; Accuracy 60.0%; macro-F1 0.600; five-fold CV mean accuracy 68.6%. The smallest reported per-class F1 is Network (0.43). These figures describe seven test reports per class and are sensitive to the sample.
 
-**Supplement:** 240-report synthetic training pool; 50 separate fictional challenge examples; original-trained and expanded-trained model accuracies 80.0% and 82.0%. The difference is one correct prediction and is not evidence of a meaningful real-world gain.
+**Supplement:** The expanded dataset includes 100 additional synthetic training reports and 50 separate synthetic challenge reports, drafted with generative-AI assistance. Models trained on 140 and 240 reports achieved accuracies of 80.0% and 82.0% on the same challenge set. The difference represents one additional correct prediction and does not establish a meaningful improvement in real-world performance.
 
-All results should be checked against the committed code and dataset versions before the report is sent to a university.
