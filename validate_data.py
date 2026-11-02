@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parent
 def main():
     reports = load_reports(ROOT / "data" / "synthetic_bug_reports.csv")
     cases = pd.read_csv(ROOT / "data" / "game_test_cases.csv", keep_default_na=False)
-    required = {"case_id", "test_title", "test_steps", "expected_result", "status"}
+    required = {"case_id", "feature_area", "test_title", "priority", "test_type", "preconditions", "test_steps", "expected_result", "status"}
     if not required.issubset(cases.columns):
         raise ValueError("The test case file is missing required columns")
     if cases.case_id.duplicated().any():
@@ -20,7 +20,12 @@ def main():
         raise ValueError("Proposed tests must remain Not run until actually executed")
     if len(cases) != 50:
         raise ValueError("The project expects 50 proposed test cases")
-    print(f"Validated {len(reports)} fictional reports and {len(cases)} proposed test cases")
+    from evaluate_expanded import verify_datasets
+    expanded = load_reports(ROOT / "data/synthetic_bug_reports_expanded.csv")
+    challenge = load_reports(ROOT / "data/synthetic_challenge_reports.csv")
+    verify_datasets(reports, expanded, challenge)
+    print(f"Validated {len(reports)} original reports, {len(expanded)} expanded training reports, "
+          f"{len(challenge)} synthetic challenge reports and {len(cases)} proposed QA cases")
     print(reports.category.value_counts().sort_index().to_string())
 
 

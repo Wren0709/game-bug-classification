@@ -1,0 +1,51 @@
+﻿report_id,title,description,actual_category,original_140_prediction,original_140_correct,expanded_240_prediction,expanded_240_correct
+CHL_001,Waypoint name disappears at large text size,"I increased the font scale so I could read better; now the name next to a map waypoint is blank, but the marker remains.",UI,UI,True,UI,True
+CHL_002,Hover card blocks inventory quantity,The tooltip that appears when I hover over a stack hides the small number showing how many are left.,UI,UI,True,UI,True
+CHL_003,Confirmation action inaccessible in compact window,"At a narrow window size, I can read the warning text but cannot reach the action at the bottom of the dialog. Keyboard navigation moves to something I cannot see.",UI,UI,True,UI,True
+CHL_004,Social badge remains after invites cleared,"There are no outstanding invitations, yet the friends tab still shows the red unread dot.",UI,UI,True,UI,True
+CHL_005,Controller navigation returns to first row,"While moving through the long accessibility list, the selected row unexpectedly snaps to the first item without changing any setting.",UI,UI,True,UI,True
+CHL_006,Item comparison text overlaps background panel,When comparing two long-named weapons the second description runs into the border and becomes unreadable.,UI,UI,True,Performance,False
+CHL_007,State indicator contradicts active filter,"The list correctly hides completed tasks, yet the tiny icon beside the filter looks exactly the same before and after I switch it.",UI,Gameplay,False,UI,True
+CHL_008,Selected control not visible at screen edge,"Playing in borderless mode on my wide monitor, I can confirm a menu option using the controller but there is no visible highlight for it.",UI,UI,True,UI,True
+CHL_009,Old binding remains on help overlay,"After rebinding dodge, the tutorial overlay still tells me to press the original keyboard key.",UI,Gameplay,False,Gameplay,False
+CHL_010,Language setting partly applied,Most interface text changes language as requested. The small labels explaining map symbols remain in the earlier language after reopening the game.,UI,UI,True,UI,True
+CHL_011,Quest reward can be claimed twice after reload,"I collected the reward, saved, and reopened the same character; the reward dialogue was available again.",Gameplay,Gameplay,True,Gameplay,True
+CHL_012,Action resources decrease with no visible effect,"I press the special action key and watch the resource bar decrease, but the character never performs the action or hits anything.",Gameplay,Gameplay,True,Gameplay,True
+CHL_013,Door opens but collision stays solid,"The gate visibly swings away after I use the key, but an invisible wall still prevents me entering.",Gameplay,Gameplay,True,Gameplay,True
+CHL_014,Completed objective returns as unfinished,"After the victory scene and unlock message, the objective reappears as incomplete when I open the journal.",Gameplay,Gameplay,True,Gameplay,True
+CHL_015,Companion fails to resume path after teleport,"Fast travelling with my pet brings us both to the new zone, but the pet will no longer follow movement commands.",Gameplay,Performance,False,Performance,False
+CHL_016,Ordinary resource satisfies rare recipe requirement,The crafting menu lists an unusual gem as essential; I can finish the recipe with a common material instead.,Gameplay,UI,False,UI,False
+CHL_017,Damage applied without meaningful drop,"The player loses health when stepping from a platform onto a nearby flat floor, even though there is almost no height difference.",Gameplay,Gameplay,True,Gameplay,True
+CHL_018,Weapon returns to default after saving,"I equipped a staff, saved the game, and loaded again; the character was holding the starter sword.",Gameplay,Gameplay,True,Gameplay,True
+CHL_019,Extra loot appears after moving bag,Dragging a stack between quick slots sometimes leaves a copy of the item in the original position.,Gameplay,Gameplay,True,UI,False
+CHL_020,Most recent respawn marker is ignored,"I interacted with the new checkpoint and saw its activation animation, but the next death returned me to the previous camp.",Gameplay,Gameplay,True,Gameplay,True
+CHL_021,First encounter with a visual effect pauses simulation,Everything stops the first time a certain enemy uses its visual ability; subsequent uses in the same session are much smoother.,Performance,Performance,True,Performance,True
+CHL_022,Memory steadily climbs when reopening store,"I open and close the store repeatedly, and memory usage rises each time without settling back down.",Performance,Performance,True,Performance,True
+CHL_023,Motion feels uneven despite steady frame counter,The image advances in uneven bursts in a crowded scene while the performance counter stays nearly unchanged.,Performance,Performance,True,Performance,True
+CHL_024,Save operation stalls the game in empty room,"The whole screen hangs briefly whenever the autosave symbol appears, even when I am standing alone.",Performance,Performance,True,Performance,True
+CHL_025,Text input lags in a large inventory,The search box receives each keystroke late only when a character has filled nearly all their storage slots.,Performance,Network,False,Network,False
+CHL_026,Repeated travel loads grow progressively slower,"The first teleport loads quickly, but later teleports in the same session spend longer at the progress screen.",Performance,Performance,True,Performance,True
+CHL_027,Fast camera pan causes momentary hitches,Whipping the camera around in a new forest area causes stutter while distant trees become sharp.,Performance,Performance,True,Performance,True
+CHL_028,Controls get increasingly sluggish offline,"During a long offline session, movement input starts responding later although frame rate and connection indicators look normal.",Performance,Performance,True,Performance,True
+CHL_029,Opening photo gallery locks controls,The controls stop responding for a second when I display the photo gallery after taking several shots.,Performance,Performance,True,Performance,True
+CHL_030,Applying graphics option pauses all interaction,"Immediately after I choose a new visual quality preset, the screen ignores input and the mouse stops moving for several seconds.",Performance,Performance,True,Performance,True
+CHL_031,Session state differs between teammates,"My lobby says the group can start, but the host still sees my status as pending on their screen.",Network,Network,True,Network,True
+CHL_032,Disconnected player returns to outdated inventory,I picked up two items just before losing the session; after reconnecting both items were gone.,Network,Network,True,Network,True
+CHL_033,Invite accepted without joining the group,"The invitation message says it worked, yet after waiting I am still alone in the main menu and the host cannot see me.",Network,Network,True,Network,True
+CHL_034,Opponent remains frozen then jumps ahead,"During an online match, another player stops moving for a moment and then appears across the room.",Network,Network,True,Network,True
+CHL_035,Matchmaking finishes for only one client,"We both accept the match, but only the host leaves the queue while my client remains on the searching screen.",Network,Network,True,Network,True
+CHL_036,Trade completed twice after timeout retry,The trade page times out and I hit retry; the exchange is recorded two times in the transaction history.,Network,UI,False,Network,True
+CHL_037,Co-op quest completion not shared,"Our team finishes the objective, but one teammate still has an incomplete quest flag.",Network,Gameplay,False,Gameplay,False
+CHL_038,Typed communication stops after leadership changes,The group changes leaders mid-session. We can still speak over microphones but new messages I type never reach the others.,Network,Network,True,UI,False
+CHL_039,Matchmaking picks the wrong server region,"I chose the Asia server for the next game, but the match summary shows we were connected elsewhere.",Network,Network,True,Network,True
+CHL_040,Shared object remains closed to guest,The team leader opens the passage and walks through; on my joined client the same passage is still sealed.,Network,Gameplay,False,Network,True
+CHL_041,Voices missing while conversation advances,"I can see the conversation captions and character gestures, but both characters are completely silent even with dialogue volume turned up.",Audio,Audio,True,Audio,True
+CHL_042,Notification chime sounds with effects muted,"I disabled sound effects in settings, yet clicking a quest completion still plays the reward tone.",Audio,Audio,True,Audio,True
+CHL_043,Movement noise remains when standing still,"After stopping the character, a repeated scraping footstep noise keeps looping until I move again.",Audio,Gameplay,False,Gameplay,False
+CHL_044,Voice from party member distorted after reconnect,"After reconnecting to co-op I can hear the music clearly, but one teammate's speech sounds crackly and compressed.",Audio,Audio,True,Audio,True
+CHL_045,Background track fails to return after combat,"The battle theme ends normally, but there is no exploration music afterward although music is enabled.",Audio,Audio,True,Audio,True
+CHL_046,Enemy audio appears on wrong headphone,"An attack approaches from the right side, although its sound is much louder in the left ear.",Audio,UI,False,Audio,True
+CHL_047,Ambient audio becomes very loud after loading,Reloading a cave save makes the dripping-water loop briefly play at maximum volume before fading down.,Audio,Audio,True,Audio,True
+CHL_048,Impact noise out of sync with visual hit,"The weapon visibly connects before I hear the corresponding hit noise, making each attack sound delayed.",Audio,Audio,True,Audio,True
+CHL_049,Muting voice also reduces environmental sound,"Lowering speech volume unexpectedly makes wind and rain quieter, while the ambience slider is unchanged.",Audio,Audio,True,Audio,True
+CHL_050,One selection produces two confirmation sounds,"I click the confirm action once. Two separate confirmation tones play, despite no other input being made.",Audio,Audio,True,Audio,True

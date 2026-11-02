@@ -1,0 +1,9 @@
+Synthetic challenge comparison: 50 cases, 10 per category
+Models use identical hyperparameters; each model is fitted to its own training dataset.
+Neither model trains on these 50 challenge reports.
+
+original_140 (n=140): accuracy=0.800; macro-F1=0.805
+expanded_240 (n=240): accuracy=0.820; macro-F1=0.822
+
+This is a synthetic development comparison, not a real-world generalisation test.
+Some issue scenarios may resemble the training data. No causal claim is made about data size alone.

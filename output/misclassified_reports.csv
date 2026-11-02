@@ -1,15 +1,15 @@
-report_id,title,description,actual_category,predicted_category,correct
-SYN-007,Scrollbar disappears in long menu,"The menu list scrolls normally, although its scrollbar disappears once the number of entries gets large.",UI,Audio,False
-SYN-031,High latency warning missing,"During severe simulated latency, the game continues without displaying any connection quality warning.",Network,Performance,False
-SYN-032,Remote player position stops updating,A remote character stops moving on screen for several seconds and then suddenly jumps to a new position.,Network,Performance,False
-SYN-058,Volume value does not match slider position,Dragging the master volume slider to its minimum leaves the displayed numeric value at 10.,UI,Audio,False
-SYN-059,Multiple menu tabs appear selected,Switching quickly between audio and video settings leaves both tabs styled as active.,UI,Network,False
-SYN-062,Consumable disappears without effect,Using a healing item during a climb removes one item from the stack without restoring health.,Gameplay,UI,False
-SYN-067,Checkpoint reload places player inside rock,Loading the latest checkpoint occasionally places the player inside nearby terrain instead of on the path.,Gameplay,Network,False
-SYN-077,Quest completion fails with full inventory,Finishing a delivery quest while the backpack is full leaves the quest marked incomplete even though the item was handed over.,Gameplay,UI,False
-SYN-084,Lobby invitation expires immediately,A newly generated party invitation is reported as expired when accepted within a few seconds.,Network,Performance,False
-SYN-089,Remote damage arrives twice,A guest is hit once by an enemy attack but receives two damage events during temporary packet loss.,Network,Gameplay,False
-SYN-107,Asset loading pauses traversal,Moving rapidly between adjacent zones causes terrain objects to appear late and movement to halt briefly.,Performance,Audio,False
-SYN-118,Large inventory slows item sorting,Sorting an inventory with many unique items takes several seconds while the interface is blocked.,Performance,UI,False
-SYN-127,Water sounds continue on dry land,"After leaving a river, splash and water ambience continue while the player walks on a stone path.",Audio,Network,False
-SYN-140,Inventory pickup sound missing for stacked items,Picking up a second item into an existing stack updates the item count but does not play a pickup sound.,Audio,Network,False
+report_id,title,description,actual_category,predicted_category,rule_category,model_score,correct
+SYN_007,Scrollbar disappears in long menu,"The menu list scrolls normally, although its scrollbar disappears once the number of entries gets large.",UI,Audio,UI,0.2115270173993981,False
+SYN_031,High latency warning missing,"During severe simulated latency, the game continues without displaying any connection quality warning.",Network,Performance,Network,0.2412914175537322,False
+SYN_032,Remote player position stops updating,A remote character stops moving on screen for several seconds and then suddenly jumps to a new position.,Network,Performance,UI,0.24759647240588747,False
+SYN_058,Volume value does not match slider position,Dragging the master volume slider to its minimum leaves the displayed numeric value at 10.,UI,Audio,Audio,0.24710181741299583,False
+SYN_059,Multiple menu tabs appear selected,Switching quickly between audio and video settings leaves both tabs styled as active.,UI,Network,Audio,0.22151093520311702,False
+SYN_062,Consumable disappears without effect,Using a healing item during a climb removes one item from the stack without restoring health.,Gameplay,UI,Gameplay,0.24465860975855858,False
+SYN_067,Checkpoint reload places player inside rock,Loading the latest checkpoint occasionally places the player inside nearby terrain instead of on the path.,Gameplay,Network,Unanalysable,0.23554064214495687,False
+SYN_077,Quest completion fails with full inventory,Finishing a delivery quest while the backpack is full leaves the quest marked incomplete even though the item was handed over.,Gameplay,UI,Gameplay,0.24108016397146495,False
+SYN_084,Lobby invitation expires immediately,A newly generated party invitation is reported as expired when accepted within a few seconds.,Network,Performance,Unanalysable,0.24438762678490092,False
+SYN_089,Remote damage arrives twice,A guest is hit once by an enemy attack but receives two damage events during temporary packet loss.,Network,Gameplay,Unanalysable,0.23629656000155919,False
+SYN_107,Asset loading pauses traversal,Moving rapidly between adjacent zones causes terrain objects to appear late and movement to halt briefly.,Performance,Audio,Unanalysable,0.23649601055387096,False
+SYN_118,Large inventory slows item sorting,Sorting an inventory with many unique items takes several seconds while the interface is blocked.,Performance,UI,Gameplay,0.236725753899751,False
+SYN_127,Water sounds continue on dry land,"After leaving a river, splash and water ambience continue while the player walks on a stone path.",Audio,Network,Unanalysable,0.22886238376216406,False
+SYN_140,Inventory pickup sound missing for stacked items,Picking up a second item into an existing stack updates the item count but does not play a pickup sound.,Audio,Network,Unanalysable,0.2242944928533902,False

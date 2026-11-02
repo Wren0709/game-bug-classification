@@ -1,0 +1,18 @@
+﻿report_id,title,description,actual_category,predicted_category,rule_category,model_score,correct
+SYN_015,Item duplicates after moving inventory slot,Moving the same item back and forth between inventory slots occasionally creates an additional copy.,Gameplay,UI,Gameplay,0.2303467966829708,False
+SYN_016,Save load resets equipped weapon,"After saving with a different weapon equipped, reloading restores the default weapon instead of the selected one.",Gameplay,UI,Unanalysable,0.2543954773980015,False
+SYN_032,Remote player position stops updating,A remote character stops moving on screen for several seconds and then suddenly jumps to a new position.,Network,Performance,UI,0.2928085161657951,False
+SYN_069,Crafting queue finishes without materials,Canceling and immediately restarting a craft can produce the item without consuming the required resources.,Gameplay,UI,Gameplay,0.25468605370862907,False
+SYN_077,Quest completion fails with full inventory,Finishing a delivery quest while the backpack is full leaves the quest marked incomplete even though the item was handed over.,Gameplay,UI,Gameplay,0.2689863486020972,False
+SYN_078,Player can equip two exclusive tools,Swapping equipment rapidly between two restricted slots allows both exclusive tools to remain active.,Gameplay,UI,Unanalysable,0.23140291119206222,False
+SYN_083,Two players can claim same reward,"When two clients confirm a shared reward at nearly the same time, both receive the item despite a one item limit.",Network,UI,Gameplay,0.22195779699684198,False
+SYN_089,Remote damage arrives twice,A guest is hit once by an enemy attack but receives two damage events during temporary packet loss.,Network,Gameplay,Unanalysable,0.3015351547909486,False
+SYN_107,Asset loading pauses traversal,Moving rapidly between adjacent zones causes terrain objects to appear late and movement to halt briefly.,Performance,Audio,Unanalysable,0.22879629438076685,False
+SYN_127,Water sounds continue on dry land,"After leaving a river, splash and water ambience continue while the player walks on a stone path.",Audio,Gameplay,Unanalysable,0.23392774572988712,False
+SYN_144,Language switch leaves one untranslated heading,"Changing the interface language updates menu options, but the matchmaking heading remains in English until restart.",UI,Audio,UI,0.24224571294970834,False
+SYN_151,Accessibility contrast toggle misses confirmation dialog,High contrast mode updates the settings pages but not the confirm-deletion window.,UI,Performance,Unanalysable,0.22860574091638905,False
+SYN_154,Gamepad cursor disappears on profile screen,"The selection highlight vanishes after switching between profiles, even though the buttons can still be activated.",UI,Gameplay,UI,0.2530867843589084,False
+SYN_167,Dropped bag duplicates after reloading checkpoint,"I recover my dropped inventory after death, reload the checkpoint, and find the same bag on the ground again.",Gameplay,Network,Gameplay,0.24442140339300586,False
+SYN_179,Jump height changes after opening inventory,Closing the inventory during a jump causes the next jump to travel much farther than usual.,Gameplay,Performance,Gameplay,0.25569030619683975,False
+SYN_191,Inventory search slows with full storage,Typing into the item search field becomes noticeably delayed when the storage chest contains many entries.,Performance,UI,Gameplay,0.2902449456063324,False
+SYN_221,Footsteps continue after climbing ends,The climbing sound keeps playing after the character reaches the ledge and starts running.,Audio,Gameplay,Audio,0.25365895282450734,False
