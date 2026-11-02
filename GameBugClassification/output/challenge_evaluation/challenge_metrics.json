@@ -1,0 +1,189 @@
+{
+  "evaluation_scope": "50 synthetic challenge descriptions, not independent real-world data",
+  "challenge_data_used_for_training": false,
+  "data_source_note": "All extra synthetic records are AI-assisted fictional examples. Similar scenarios across sets may inflate scores.",
+  "environment": {
+    "python": "3.13.5",
+    "scikit_learn": "1.8.0"
+  },
+  "dataset_sha256": {
+    "synthetic_bug_reports.csv": "00edd55dafd1bec4f0f4546d54b38e6b7f098f175c59da829a7d2064eb16645d",
+    "synthetic_bug_reports_expanded.csv": "e6259b90f1fe2069ebaf7b38f7cd5f9dab103b6e164c59f431d7c3ce4a2c65c7",
+    "synthetic_challenge_reports.csv": "1ea15ae1d4c66d904c0e22b7f8137fc8ebc613938ee93b6cfe7c6fa2c38b1709"
+  },
+  "model": "TF-IDF word 1\u20132 grams + balanced logistic regression (same pipeline for both)",
+  "results": {
+    "original_140": {
+      "accuracy": 0.8,
+      "macro_f1": 0.8048447204968945,
+      "by_class": {
+        "Audio": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1-score": 0.8888888888888888,
+          "support": 10.0
+        },
+        "Gameplay": {
+          "precision": 0.6153846153846154,
+          "recall": 0.8,
+          "f1-score": 0.6956521739130435,
+          "support": 10.0
+        },
+        "Network": {
+          "precision": 0.875,
+          "recall": 0.7,
+          "f1-score": 0.7777777777777778,
+          "support": 10.0
+        },
+        "Performance": {
+          "precision": 0.9,
+          "recall": 0.9,
+          "f1-score": 0.9,
+          "support": 10.0
+        },
+        "UI": {
+          "precision": 0.7272727272727273,
+          "recall": 0.8,
+          "f1-score": 0.7619047619047619,
+          "support": 10.0
+        },
+        "accuracy": 0.8,
+        "macro avg": {
+          "precision": 0.8235314685314685,
+          "recall": 0.8,
+          "f1-score": 0.8048447204968945,
+          "support": 50.0
+        },
+        "weighted avg": {
+          "precision": 0.8235314685314685,
+          "recall": 0.8,
+          "f1-score": 0.8048447204968945,
+          "support": 50.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          8,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          8,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          7,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          9,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          8
+        ]
+      ]
+    },
+    "expanded_240": {
+      "accuracy": 0.82,
+      "macro_f1": 0.821704260651629,
+      "by_class": {
+        "Audio": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1-score": 0.9473684210526315,
+          "support": 10.0
+        },
+        "Gameplay": {
+          "precision": 0.7,
+          "recall": 0.7,
+          "f1-score": 0.7,
+          "support": 10.0
+        },
+        "Network": {
+          "precision": 0.8888888888888888,
+          "recall": 0.8,
+          "f1-score": 0.8421052631578947,
+          "support": 10.0
+        },
+        "Performance": {
+          "precision": 0.8181818181818182,
+          "recall": 0.9,
+          "f1-score": 0.8571428571428571,
+          "support": 10.0
+        },
+        "UI": {
+          "precision": 0.7272727272727273,
+          "recall": 0.8,
+          "f1-score": 0.7619047619047619,
+          "support": 10.0
+        },
+        "accuracy": 0.82,
+        "macro avg": {
+          "precision": 0.8268686868686869,
+          "recall": 0.8200000000000001,
+          "f1-score": 0.821704260651629,
+          "support": 50.0
+        },
+        "weighted avg": {
+          "precision": 0.826868686868687,
+          "recall": 0.82,
+          "f1-score": 0.821704260651629,
+          "support": 50.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          9,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          8,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          9,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          8
+        ]
+      ]
+    }
+  }
+}

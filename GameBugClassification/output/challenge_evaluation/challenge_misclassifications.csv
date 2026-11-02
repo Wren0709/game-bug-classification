@@ -1,0 +1,14 @@
+﻿report_id,title,description,actual_category,original_140_prediction,original_140_correct,expanded_240_prediction,expanded_240_correct
+CHL_006,Item comparison text overlaps background panel,When comparing two long-named weapons the second description runs into the border and becomes unreadable.,UI,UI,True,Performance,False
+CHL_007,State indicator contradicts active filter,"The list correctly hides completed tasks, yet the tiny icon beside the filter looks exactly the same before and after I switch it.",UI,Gameplay,False,UI,True
+CHL_009,Old binding remains on help overlay,"After rebinding dodge, the tutorial overlay still tells me to press the original keyboard key.",UI,Gameplay,False,Gameplay,False
+CHL_015,Companion fails to resume path after teleport,"Fast travelling with my pet brings us both to the new zone, but the pet will no longer follow movement commands.",Gameplay,Performance,False,Performance,False
+CHL_016,Ordinary resource satisfies rare recipe requirement,The crafting menu lists an unusual gem as essential; I can finish the recipe with a common material instead.,Gameplay,UI,False,UI,False
+CHL_019,Extra loot appears after moving bag,Dragging a stack between quick slots sometimes leaves a copy of the item in the original position.,Gameplay,Gameplay,True,UI,False
+CHL_025,Text input lags in a large inventory,The search box receives each keystroke late only when a character has filled nearly all their storage slots.,Performance,Network,False,Network,False
+CHL_036,Trade completed twice after timeout retry,The trade page times out and I hit retry; the exchange is recorded two times in the transaction history.,Network,UI,False,Network,True
+CHL_037,Co-op quest completion not shared,"Our team finishes the objective, but one teammate still has an incomplete quest flag.",Network,Gameplay,False,Gameplay,False
+CHL_038,Typed communication stops after leadership changes,The group changes leaders mid-session. We can still speak over microphones but new messages I type never reach the others.,Network,Network,True,UI,False
+CHL_040,Shared object remains closed to guest,The team leader opens the passage and walks through; on my joined client the same passage is still sealed.,Network,Gameplay,False,Network,True
+CHL_043,Movement noise remains when standing still,"After stopping the character, a repeated scraping footstep noise keeps looping until I move again.",Audio,Gameplay,False,Gameplay,False
+CHL_046,Enemy audio appears on wrong headphone,"An attack approaches from the right side, although its sound is much louder in the left ear.",Audio,UI,False,Audio,True

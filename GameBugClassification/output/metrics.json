@@ -1,0 +1,38 @@
+{
+  "dataset_sha256": "00edd55dafd1bec4f0f4546d54b38e6b7f098f175c59da829a7d2064eb16645d",
+  "python": "3.12.14",
+  "scikit_learn": "1.9.1",
+  "seed": 42,
+  "train_count": 105,
+  "test_count": 35,
+  "model": {
+    "accuracy": 0.6,
+    "macro_f1": 0.6
+  },
+  "majority_baseline": {
+    "accuracy": 0.2,
+    "macro_f1": 0.06666666666666667
+  },
+  "keyword_baseline": {
+    "accuracy": 0.2857142857142857,
+    "macro_f1": 0.3587301587301587
+  },
+  "cross_validation": {
+    "accuracy": [
+      0.75,
+      0.6428571428571429,
+      0.7142857142857143,
+      0.5357142857142857,
+      0.7857142857142857
+    ],
+    "macro_f1": [
+      0.7343434343434344,
+      0.6412121212121212,
+      0.7004761904761904,
+      0.5252991452991452,
+      0.7784615384615384
+    ]
+  },
+  "dataset_kind": "synthetic dataset",
+  "scope": "Development benchmark, not independent real world validation"
+}

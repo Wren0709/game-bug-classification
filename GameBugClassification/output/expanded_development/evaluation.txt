@@ -1,0 +1,27 @@
+Game bug report classification: synthetic dataset
+Training reports: 180
+Holdout reports: 60
+Model accuracy: 0.717
+Model macro F1: 0.714
+Most frequent baseline accuracy: 0.200
+Most frequent baseline macro F1: 0.067
+Five fold CV accuracy: 0.779 ± 0.068
+Five fold CV macro F1: 0.777 ± 0.066
+Keyword baseline accuracy: 0.400
+Keyword baseline macro F1: 0.463
+Keyword ties/no matches abstain and count as incorrect.
+
+              precision    recall  f1 score   support
+
+       Audio       0.83      0.83      0.83        12
+    Gameplay       0.56      0.42      0.48        12
+     Network       0.90      0.75      0.82        12
+ Performance       0.77      0.83      0.80        12
+          UI       0.56      0.75      0.64        12
+
+    accuracy                           0.72        60
+   macro avg       0.72      0.72      0.71        60
+weighted avg       0.72      0.72      0.71        60
+
+This development evaluation does not establish independent real world performance.
+Random splitting cannot rule out scenario similarity across the sets.

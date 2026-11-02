@@ -1,0 +1,36 @@
+report_id,title,description,actual_category,predicted_category,rule_category,model_score,correct
+SYN_007,Scrollbar disappears in long menu,"The menu list scrolls normally, although its scrollbar disappears once the number of entries gets large.",UI,Audio,UI,0.2115270173993981,False
+SYN_008,Keybinding label shows old shortcut,"After I change an action's key binding, the controls page still displays the previous shortcut.",UI,UI,Unanalysable,0.22513999662076578,True
+SYN_027,Chat messages arrive out of order,Messages sent in quick succession by two players occasionally appear in a different order on their chat panels.,Network,Network,Unanalysable,0.2453749994541746,True
+SYN_031,High latency warning missing,"During severe simulated latency, the game continues without displaying any connection quality warning.",Network,Performance,Network,0.2412914175537322,False
+SYN_032,Remote player position stops updating,A remote character stops moving on screen for several seconds and then suddenly jumps to a new position.,Network,Performance,UI,0.24759647240588747,False
+SYN_039,Environmental sound disappears after reload,"An ambient sound source is audible before saving, but its audio disappears after loading that save.",Audio,Audio,Audio,0.2807356121803622,True
+SYN_040,Notification sound ignores mute setting,The notification tone still plays even after sound effects have been muted in the audio settings.,Audio,Audio,Audio,0.2776804282825136,True
+SYN_041,Map legend remains hidden behind quest tracker,"At the default interface scale, expanding the map legend places its last two entries underneath the pinned quest tracker.",UI,UI,Unanalysable,0.25125692021158225,True
+SYN_044,Crafting recipe text uses wrong quantity,"The crafting panel shows two components required, although the recipe details list three.",UI,UI,Unanalysable,0.22985105613767612,True
+SYN_058,Volume value does not match slider position,Dragging the master volume slider to its minimum leaves the displayed numeric value at 10.,UI,Audio,Audio,0.24710181741299583,False
+SYN_059,Multiple menu tabs appear selected,Switching quickly between audio and video settings leaves both tabs styled as active.,UI,Network,Audio,0.22151093520311702,False
+SYN_060,Subtitle background blocks dialogue choices,"With large subtitles enabled, the subtitle panel overlays the lowest dialogue response.",UI,UI,Unanalysable,0.23449691859862715,True
+SYN_062,Consumable disappears without effect,Using a healing item during a climb removes one item from the stack without restoring health.,Gameplay,UI,Gameplay,0.24465860975855858,False
+SYN_064,Enemy loses target after short obstacle,"An enemy stops pursuing the player permanently when the player walks behind a small crate, even after line of sight returns.",Gameplay,Gameplay,Unanalysable,0.2375543734366676,True
+SYN_067,Checkpoint reload places player inside rock,Loading the latest checkpoint occasionally places the player inside nearby terrain instead of on the path.,Gameplay,Network,Unanalysable,0.23554064214495687,False
+SYN_068,Shield blocks damage from behind,An enemy attack from behind is negated while the player holds a forward facing shield.,Gameplay,Gameplay,Unanalysable,0.23896313398092295,True
+SYN_069,Crafting queue finishes without materials,Canceling and immediately restarting a craft can produce the item without consuming the required resources.,Gameplay,Gameplay,Gameplay,0.2594542543898269,True
+SYN_075,Save reload duplicates collected key,"After collecting a unique key and reloading the save, the key appears both in inventory and at its original location.",Gameplay,Gameplay,Gameplay,0.21831672212624587,True
+SYN_077,Quest completion fails with full inventory,Finishing a delivery quest while the backpack is full leaves the quest marked incomplete even though the item was handed over.,Gameplay,UI,Gameplay,0.24108016397146495,False
+SYN_084,Lobby invitation expires immediately,A newly generated party invitation is reported as expired when accepted within a few seconds.,Network,Performance,Unanalysable,0.24438762678490092,False
+SYN_086,Party chat repeats after reconnect,Rejoining an online lobby causes the latest party chat message to appear a second time.,Network,Network,Unanalysable,0.2589425092483193,True
+SYN_087,Remote interaction prompt never clears,A guest continues to see an interaction prompt for an object the host already removed from the world.,Network,Network,Unanalysable,0.28610369862572754,True
+SYN_089,Remote damage arrives twice,A guest is hit once by an enemy attack but receives two damage events during temporary packet loss.,Network,Gameplay,Unanalysable,0.23629656000155919,False
+SYN_105,Autosave causes visible stutter,Each autosave produces a short interruption in character movement while the save icon is displayed.,Performance,Performance,Gameplay,0.22308555295402285,True
+SYN_107,Asset loading pauses traversal,Moving rapidly between adjacent zones causes terrain objects to appear late and movement to halt briefly.,Performance,Audio,Unanalysable,0.23649601055387096,False
+SYN_108,Window mode switch hangs for several seconds,Switching from fullscreen to borderless mode makes the application unresponsive for several seconds before the display updates.,Performance,Performance,Unanalysable,0.3043484058294465,True
+SYN_110,Repeated map opening increases memory footprint,The process memory footprint grows each time the world map is opened and never returns to its earlier level.,Performance,Performance,Performance,0.2569798674538873,True
+SYN_113,Background loading blocks audio and input,Entering a new area briefly freezes character controls and audio while assets stream in.,Performance,Performance,Unanalysable,0.26059274115812986,True
+SYN_118,Large inventory slows item sorting,Sorting an inventory with many unique items takes several seconds while the interface is blocked.,Performance,UI,Gameplay,0.236725753899751,False
+SYN_120,Camera rotation stutters near moving lights,Rotating the camera near multiple moving light sources causes periodic frame time spikes.,Performance,Performance,Unanalysable,0.2908178624234081,True
+SYN_123,Dialogue voice missing after loading save,Loading a save during dialogue resumes subtitles but not the accompanying recorded voice.,Audio,Audio,Gameplay,0.24568480225775713,True
+SYN_127,Water sounds continue on dry land,"After leaving a river, splash and water ambience continue while the player walks on a stone path.",Audio,Network,Unanalysable,0.22886238376216406,False
+SYN_132,Voice lines overlap at conversation end,Selecting a dialogue response before the previous line finishes causes both voice lines to play at once.,Audio,Audio,Unanalysable,0.2532999623340835,True
+SYN_133,Footstep material sound mismatches surface,Walking across a wooden bridge plays the same metallic footstep sound heard on a metal floor.,Audio,Audio,Audio,0.3018434457700974,True
+SYN_140,Inventory pickup sound missing for stacked items,Picking up a second item into an existing stack updates the item count but does not play a pickup sound.,Audio,Network,Unanalysable,0.2242944928533902,False

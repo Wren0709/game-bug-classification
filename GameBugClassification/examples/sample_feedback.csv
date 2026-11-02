@@ -1,0 +1,7 @@
+report_id,description,log_excerpt,log_file
+DEMO-01,"The lobby disconnects when the host switches areas.","[WARN] connection timed out during scene load",network_sample.log
+DEMO-02,"After switching resolutions the quest text overlaps the map.",,
+DEMO-03,"The crafting table takes my wood but does not create the item.",,
+DEMO-04,"A cutscene has subtitles but no spoken dialogue.",,
+DEMO-05,"Frame time spikes when the inventory is opened repeatedly.","[WARN] long frame detected",
+DEMO-06,,,
