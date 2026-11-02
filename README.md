@@ -23,7 +23,7 @@ python -m unittest discover -s tests -v
 python workbench.py --input examples/sample_feedback.csv --id-col report_id --log-col log_excerpt --logs-dir examples
 ```
 
-The worksheet is saved to `private/workbench_results.csv`. Open it in a spreadsheet editor, fill in `reviewed_category`, and save it as UTF-8 CSV. The accepted categories are `Audio`, `Gameplay`, `Network`, `Performance` and `UI`.
+The worksheet is saved to `private/workbench_results.csv`. Open it in a spreadsheet editor, fill in `reviewed_category`, and save it as UTF-8 CSV. The accepted categories are `Audio`, `Gameplay`, `Network`, `Performance` and `UI`.Review the suggested categories in private/workbench_results.csv and enter the final labels in the reviewed_category column. Rows without a manually assigned category will remain unreviewed.
 
 ```bash
 python review_results.py
@@ -112,3 +112,12 @@ Keep real input files in `incoming/` and results in `private/`. Both folders are
 This is not automatic anonymisation: descriptions, selected IDs and links can still contain private information. Review them before sharing. `.gitignore` does not remove files already tracked by Git or erase repository history.
 
 CSV cells that could be interpreted as formulas are prefixed with an apostrophe, including cells beginning with `=`, `+`, `-`, `@`, tab or a line break. The original input file is not changed. A spreadsheet application may display the apostrophe; removing it or resaving in another format can remove that protection.
+
+Troubleshooting
+
+* File not found: Check the input path and run the command from the project directory.
+* Column not found: Use --text-col to specify the correct description column.
+* Output already exists: Choose another output path or use --overwrite.
+* Missing log file: Check the filename and the directory specified by --logs-dir.
+
+Run python workbench.py --help to view the available options.
