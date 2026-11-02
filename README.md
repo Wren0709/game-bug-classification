@@ -101,7 +101,7 @@ These scores describe a small synthetic dataset. Similar scenarios may occur in 
 - `data/`: the original 140 fictional reports, a 240-report expanded training version, a separate 50-report synthetic challenge set, 50 proposed QA cases marked `Not run`, and an empty observation template.
 - `examples/`, `tests/`: a small demo and automated tests.
 - `output/`: original results plus separate expanded-development and challenge-test outputs.
-- `docs/`: usage, upload and academic evidence notes.
+- `docs/`: Classification guidelines, experimental details and supporting technical evidence.
 
 This is a standalone command-line project. It does not include the separate team website, Feishu sync or an external AI service.
 
